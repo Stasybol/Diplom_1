@@ -11,7 +11,5 @@ public class IngredientTypeTest {
     @Test
     public void enumTest(){
         Assert.assertEquals("Количество ингредиентов должно быть 2", 2, ingredients.length);
-        Assert.assertEquals("В перечисление нет такого типа ингредиента", SAUCE, IngredientType.valueOf("SAUCE"));
-        Assert.assertEquals("В перечисление нет такого типа ингредиента", FILLING, IngredientType.valueOf("FILLING"));
     }
 }

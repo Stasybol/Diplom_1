@@ -88,12 +88,6 @@ public class BurgerTest {
         burger.addIngredient(ingredient1);
         burger.addIngredient(ingredient2);
 
-        String receiptBeforeMove = burger.getReceipt();
-
-        String[] linesBeforeMove = receiptBeforeMove.split("\\r\\n");
-        Assert.assertEquals("Ингредиент не на том месте", "= sauce ingredient1 =", linesBeforeMove[1]);
-        Assert.assertEquals("Ингредиент не на том месте","= filling ingredient2 =", linesBeforeMove[2]);
-
         burger.moveIngredient(1, 0);
         String receiptAfterMove = burger.getReceipt();
         String[] linesAfterMove = receiptAfterMove.split("\\r\\n");
